@@ -1,0 +1,133 @@
+﻿@{
+    ViewBag.Title = "Nöbet";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h1>Nöbet Listesi</h1>
+
+<!-- Yeni Nöbet Ekle Butonu -->
+
+
+<!-- Nöbet Tablosu -->
+<div class="table-responsive">
+    <table class="table table-bordered mt-3">
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Branş</th>
+            <th>Tarih</th>
+            <th>İşlem</th>
+        </tr>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ad</td>
+                <td>@x.soyad</td>
+                <td>@x.bölümü</td>
+                <td>@x.tarih</td>
+                <td>
+                    <button class="btn btn-danger btn-custom" data-id="@x.Id">
+                        Sil
+                    </button>
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="mb-3">
+    <button class="btn btn-primary add-button" data-toggle="modal" data-target="#nobetModal">
+        Yeni Nöbet Ekle
+    </button>
+</div>
+<!-- Modal Form -->
+<div class="modal fade" id="nobetModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Yeni Nöbet Ekle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @using (Html.BeginForm("YeniNobetEkle", "nobet", FormMethod.Post, new { id = "nobetForm" }))
+            {
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="ad">Ad:</label>
+                        <input type="text" id="ad" name="ad" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="soyad">Soyad:</label>
+                        <input type="text" id="soyad" name="soyad" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="brans">Branş:</label>
+                        <input type="text" id="brans" name="brans" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="tarih">Tarih:</label>
+                        <input type="date" id="tarih" name="tarih" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    <button type="submit" class="btn btn-success">Kaydet</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+
+<!-- jQuery ve AJAX ile etkileşimler -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Silme Butonunun İşlevselliği
+        $(document).on("click", ".btn-danger", function () {
+            var id = $(this).data('id');
+            if (confirm("Bu nöbeti silmek istediğinizden emin misiniz?")) {
+                $.ajax({
+                    url: '/nobet/SilNobet',
+                    type: 'POST',
+                    data: { id: id },
+                    success: function (response) {
+                        $(".table-responsive").html(response);
+                    },
+                    error: function () {
+                        alert("Bir hata oluştu!");
+                    }
+                });
+            }
+        });
+
+        // Yeni Nöbet Ekleme Formu Gönderimi
+        $("#nobetForm").submit(function (event) {
+            event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
+
+            $.ajax({
+                url: $(this).attr('action'), // Form action URL'si
+                type: 'POST',
+                data: $(this).serialize(), // Form verileri
+                success: function (response) {
+                    $(".table-responsive").html(response); // Listeyi güncelle
+                    $('#nobetModal').modal('hide'); // Modalı kapat
+                },
+                error: function () {
+                    alert("Bir hata oluştu!");
+                }
+            });
+        });
+    });
+
+</script>
+<style>
+    .add-button {
+        position: relative;
+        bottom: 5px;
+        right: 5px;
+        
+        width: 150px;
+    }
+</style>

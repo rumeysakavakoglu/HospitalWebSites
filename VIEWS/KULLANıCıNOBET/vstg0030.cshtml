@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<h1 style="text-align: center; font-family: Arial, sans-serif; margin-bottom: 20px;">Nöbet Listesi</h1>
+
+<div class="table-container" style="max-width: 800px; margin: 0 auto;">
+    <table class="custom-table" style="width: 100%; border-collapse: collapse; font-family: Arial, sans-serif;">
+        <thead>
+            <tr style="background-color: #4CAF50; color: white; text-align: left;">
+                <th style="padding: 10px; border: 1px solid #ddd;">Ad</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">soyad</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">Bölüm</th>
+                <th style="padding: 10px; border: 1px solid #ddd;">tarih</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 10px; border: 1px solid #ddd;">@item.ad</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">@item.soyad</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">@item.bölümü</td>
+                    <td style="padding: 10px; border: 1px solid #ddd;">@item.tarih</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<style>
+    .custom-table {
+        width: 100%;
+        border-collapse: collapse;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+        .custom-table th {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .custom-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .custom-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .custom-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+    .table-container {
+        max-width: 800px;
+        margin: 20px auto;
+        overflow-x: auto;
+        border-radius: 8px;
+    }
+
+    h1 {
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+</style>

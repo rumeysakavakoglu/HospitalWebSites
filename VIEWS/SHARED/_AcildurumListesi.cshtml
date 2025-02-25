@@ -1,0 +1,29 @@
+﻿
+@model List<$safeprojectname$.Models.acildurum>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ACİL DURUM</th>
+           
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.bildirim</td>
+             
+
+                
+            </tr>
+        }
+    </tbody>
+</table>

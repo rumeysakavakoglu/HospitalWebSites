@@ -1,0 +1,192 @@
+﻿@using $safeprojectname$.Models
+@model List<giris>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+@using (Html.BeginForm("giris", "giris", FormMethod.Post))
+{
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kullanıcı Giriş Paneli</title>
+        <style>
+            * {
+
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            body {
+                background:#d1eef5;
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                overflow: hidden;
+            }
+
+            .wrapper {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+            }
+
+            .container, .info-section, .assistant-section {
+                width: 400px;
+                background: #fff;
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+
+            .container {
+                width: 550px;
+            }
+
+            .assistant-section {
+                background: #f9f9f9;
+            }
+
+                .assistant-section h3 {
+                    font-size: 38px;
+                    margin-bottom: 55px;
+                    color: #444;
+                }
+
+                .assistant-section p {
+                    font-size: 14px;
+                    line-height: 1.5;
+                    color: #666;
+                }
+
+            .container img {
+                width: 220px;
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+
+            .container h2 {
+                font-size: 26px;
+                margin-bottom: 20px;
+                color: #444;
+            }
+
+            .txtb {
+                margin: 20px 0;
+                position: relative;
+            }
+
+                .txtb input {
+                    width: 100%;
+                    padding: 12px;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    font-size: 15px;
+                    outline: none;
+                    transition: all 0.3s;
+                }
+
+                    .txtb input:focus {
+                        border-color: #f093fb;
+                        box-shadow: 0 0 8px rgba(240, 147, 251, 0.5);
+                    }
+
+            .logbtn {
+                width: 60%;
+                padding: 12px;
+                background: linear-gradient(120deg, #d372f4, #4377e3);
+                border: none;
+                border-radius: 8px;
+                color: #fff;
+                font-size: 18px;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+
+                .logbtn:hover {
+                    background: linear-gradient(120deg, #c4e3f9, #e0a7ff);
+                }
+
+            .info-section {
+                background: #f9f9f9;
+            }
+
+                .info-section h3 {
+                    margin-bottom: 10px;
+                    color: #444;
+                }
+
+                .info-section p {
+                    font-size: 14px;
+                    line-height: 1.5;
+                    color: #666;
+                }
+
+                .info-section img {
+                    width: 80%;
+                    margin-bottom: 15px;
+                    border-radius: 10px;
+                }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <!-- Sol: Asistan ve Hoca Girişi -->
+            <div class="assistant-section">
+                <img src="~/adminpanelliwebsitesi/hasst.png" alt="Asistan ve Hoca">
+           
+                <h3>Asistan ve Hoca Giriş Sistemi</h3>
+                <p>Asistanlar ve hocalar için güvenli giriş sistemi.<br> Lütfen kullanıcı bilgilerinizi kullanarak giriş yapın.</p>
+                <br />
+
+
+            </div>
+
+            <!-- Orta: Kullanıcı Girişi -->
+            <div class="container">
+                <div class="contact-form">
+                    <img src="~/adminpanelliwebsitesi/doctor.images.png" class="kullanıcı-image">
+
+
+                    <!-- Kullanıcı Giriş Formu -->
+                    <div class="txtb">
+                        <input type="text" name="kullanıcıadı" placeholder="Kullanıcı Adı" required>
+                    </div>
+                    <div class="txtb">
+                        <input type="password" name="sifre" placeholder="Şifre" required>
+                    </div>
+                    <input type="submit" class="logbtn" value="Giriş Yap">
+
+                    <!-- Hata Mesajı -->
+                    @if (ViewBag.Hata != null)
+                    {
+                        <p style="color: red;">@ViewBag.Hata</p>
+                    }
+                </div>
+            </div>
+
+            <!-- Sağ: Hastane Bilgilendirme Köşesi -->
+            <div class="info-section">
+                <img src="~/adminpanelliwebsitesi/Ekran görüntüsü 2024-12-18 235519.png" alt="Hastane Resmi">
+                <h3>Hastane Hakkında</h3>
+                <p>
+                    Hastanemiz, en son teknolojik donanımlarla ve uzman sağlık ekibiyle size en iyi sağlık hizmetlerini sunmayı taahhüt eder.
+                </p>
+                <p>
+                    Çalışma Saatlerimiz: Hafta içi 08:00 - 18:00<br>
+                    Acil Durum: 7/24 Hizmetinizdeyiz.
+                </p>
+
+            </div>
+
+        </div>
+    </body>
+}

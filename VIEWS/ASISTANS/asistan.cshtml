@@ -1,0 +1,119 @@
+﻿@using $safeprojectname$.Models
+@model List<asistan>
+
+@{
+    ViewBag.Title = "Asistan";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h1>Asistan Listesi</h1>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Soyad</th>
+                <th>Telefon Numarası</th>
+                <th>E-mail</th>
+                <th>İşlem</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ad</td>
+                    <td>@item.soyad</td>
+                    <td>@item.telefon</td>
+                    <td>@item.email</td>
+                    <td>
+                        <!-- Sil Butonu -->
+                        <form method="post" asp-controller="asistans" asp-action="SilAsistan" style="display:inline;">
+                            <input type="hidden" name="id" value="@item.id" />
+                            <button type="submit" class="btn btn-danger">Sil</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Yeni Asistan Ekle Butonu -->
+<button class="btn btn-primary add-button" data-toggle="modal" data-target="#guncelleModal">
+    Yeni Asistan Ekle
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="guncelleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Yeni Asistan Ekle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @using (Html.BeginForm("YeniAsistanEkle", "Asistans", FormMethod.Post, new { id = "asistanForm" }))
+            {
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="ad">Ad:</label>
+                        <input type="text" id="ad" name="ad" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="soyad">Soyad:</label>
+                        <input type="text" id="soyad" name="soyad" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    <button type="submit" class="btn btn-success">Tamam</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- jQuery ve Ajax ile gerekli etkileşimler -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Yeni Asistan Ekle Butonunun işlevselliği
+        $(".add-button").on("click", function () {
+            $('#guncelleModal').modal('show');
+        });
+
+        // Form gönderimi sırasında AJAX işlemi
+        $("#asistanForm").submit(function (event) {
+            event.preventDefault(); // Formun normal şekilde gönderilmesini engelle
+
+            $.ajax({
+                url: '/Asistans/YeniAsistanEkle',  // Formun action URL'sini kullan
+                type: 'POST',
+                data: $(this).serialize(),  // Form verilerini serileştir
+                success: function (response) {
+                    // Listeyi güncelle
+                    $(".table-responsive").html(response);
+                    $('#guncelleModal').modal('hide');  // Modalı kapat
+                },
+                error: function () {
+                    alert("Bir hata oluştu!");
+                }
+            });
+        });
+    });
+</script>
+
+<!-- CSS kısmı -->
+<style>
+    /* Yeni asistan ekle butonunu sayfanın sağ alt köşesine yerleştirmek için */
+    .add-button {
+        position:relative;
+        bottom: 5px;
+        right: 5px;
+        z-index: 1051;
+        width:150px;
+    }
+</style>

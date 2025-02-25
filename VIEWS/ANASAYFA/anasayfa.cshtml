@@ -1,0 +1,140 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hastane Giriş Sayfası</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(120deg, #f0f4f8, #d9e2ec);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 80%;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+            .header img {
+                width: 100px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+                color: #333;
+            }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+            .card:hover {
+                transform: scale(1.05);
+            }
+
+            .card img {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 10px;
+                object-fit: cover;
+            }
+
+            .card h3 {
+                font-size: 18px;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+        .emergency {
+            margin-top: 20px;
+            padding: 15px;
+            background: #ffefef;
+            border: 1px solid #ff6b6b;
+            border-radius: 10px;
+            text-align: center;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+            .emergency a {
+                color: #ff6b6b;
+                text-decoration: none;
+            }
+
+                .emergency a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="~/adminpanelliwebsitesi/Ekran görüntüsü 2024-12-18 235519.png" alt="Hastane Logosu">
+            <h1>KAVAKOĞLU HOSPİTAL</h1>
+        </div>
+        <div class="grid">
+            <div class="card" onclick="location.href='@Url.Action("kullanıcıRandevu", "kullanıcıRandevu")'">
+            
+
+
+                <div>
+                    <img src="~/adminpanelliwebsitesi/indir.jpg" alt="Randevu Oluştur">
+                    <h3>Randevu Oluştur</h3>
+                </div>
+            </div>
+            <div class="card" onclick="location.href='@Url.Action("kullanıcıHocalar", "kullanıcıHocalar")'">
+                <img src="~/adminpanelliwebsitesi/doctor.images.png" alt="Hocalar">
+                <h3>Hocalar</h3>
+            </div>
+            <div class="card" onclick="location.href='@Url.Action("kullanıcıNobet", "kullanıcıNobet")'">
+                <img src="~/adminpanelliwebsitesi/zxs.png" alt="Nöbetler">
+                <h3>Nöbetler</h3>
+            </div>
+            <div class="card" onclick="location.href='@Url.Action("kullanıcıBolumbilgileri", "kullanıcıBolumbilgileri")'">
+                <img src="~/adminpanelliwebsitesi/sss.png" alt="Poliklinik Bilgileri">
+                <h3>Poliklinik Bilgileri</h3>
+            </div>
+        </div>
+      <div class="emergency" onclick="location.href='@Url.Action("acildurum2", "acildurum2")'">
+    
+     <p>HASTANE ACİL DURUM</p>
+ </div>
+    </div>
+</body>
+</html>

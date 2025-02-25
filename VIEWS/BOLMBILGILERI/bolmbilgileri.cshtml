@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Bölüm Bilgileri";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<table class="table table-bordered mt-3">
+    <thead>
+        <tr>
+            <th>Poliklinik</th>
+            <th>Yatak Sayısı</th>
+            <th>Ayakta Hasta Giriş Kapasitesi</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.ad</td>
+                <td>@x.yataksayısı</td>
+                <td>@x.Ayaktahastagiris</td>
+                <td>
+                    <!-- Güncelle Butonu -->
+                    <a href="@Url.Action("Guncelle", "bolmbilgileri", new { id = x.id })" class="btn btn-primary">
+                        Güncelle
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

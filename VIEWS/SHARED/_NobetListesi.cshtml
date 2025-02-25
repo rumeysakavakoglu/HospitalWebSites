@@ -1,0 +1,26 @@
+﻿@model List<$safeprojectname$.Models.nobet>
+
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Branş</th>
+        <th>Tarih Aralığı</th>
+        <th>İşlem</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ad</td>
+            <td>@x.soyad</td>
+            <td>@x.bölümü</td>
+            <td>@x.tarih</td>
+            <td>
+                <button class="btn btn-danger btn-custom" data-id="@x.Id">
+                    Sil
+                </button>
+            </td>
+        </tr>
+    }
+</table>
+<!-- Sol Alta Yerleştirilen Buton -->

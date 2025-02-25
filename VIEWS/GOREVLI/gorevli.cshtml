@@ -1,0 +1,115 @@
+﻿@using $safeprojectname$.Models
+@model List<gorevli>
+
+@{
+    ViewBag.Title = "Hoca";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h1>Hoca Listesi</h1>
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Ad</th>
+                <th>Bölüm</th>
+                <th>E-mail</th>
+                <th>İşlem</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ad</td>
+                    <td>@item.bölüm</td>
+                    <td>@item.email</td>
+
+                    <td>
+                        <!-- Sil Butonu -->
+                        <form method="post" asp-controller="gorevli" asp-action="SilGorevli" style="display:inline;">
+                            <input type="hidden" name="id" value="@item.id" />
+                            <button type="submit" class="btn btn-danger">Sil</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<!-- Yeni Asistan Ekle Butonu -->
+<button class="btn btn-primary add-button" data-toggle="modal" data-target="#guncelleModal">
+    Yeni Hoca Ekle
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="guncelleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Yeni Hoca Ekle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @using (Html.BeginForm("YeniGorevliEkle", "gorevli", FormMethod.Post, new { id = "gorevliForm" }))
+            {
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="ad">Ad:</label>
+                        <input type="text" id="ad" name="ad" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="soyad">Soyad:</label>
+                        <input type="text" id="bölüm" name="bölüm" class="form-control" required />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                    <button type="submit" class="btn btn-success">Tamam</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- jQuery ve Ajax ile gerekli etkileşimler -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Yeni Hoca Ekle Butonunun işlevselliği
+        $(".add-button").on("click", function () {
+            $('#guncelleModal').modal('show');
+        });
+
+        // Form gönderimi sırasında AJAX işlemi
+        $("#gorevliForm").submit(function (event) {
+            event.preventDefault(); // Formun normal şekilde gönderilmesini engelle
+
+            $.ajax({
+                url: '/Gorevli/YeniGorevliEkle',  // Formun action URL'sini kullan
+                type: 'POST',
+                data: $(this).serialize(),  // Form verilerini serileştir
+                success: function (response) {
+                    // Listeyi güncelle
+                    $(".table-responsive table").html(response);  // Yalnızca tabloyu güncelle
+                    $('#guncelleModal').modal('hide');  // Modalı kapat
+                },
+                error: function () {
+                    alert("Bir hata oluştu!");
+                }
+            });
+        });
+    });
+</script>
+<style>
+    .add-button {
+        position: relative;
+        bottom: 5px;
+        right: 5px;
+        width: 150px;
+        z-index: 1051;
+    }
+</style>

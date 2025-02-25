@@ -1,0 +1,93 @@
+﻿@{
+    ViewBag.Title = "Randevular";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<!-- Başlık ve Üst Mesaj Alanı -->
+<div id="message" style="display:none; padding: 10px; font-size: 18px; text-align: center; font-weight: bold;">
+    <div id="successMessage" style="color: green;"></div>
+    <div id="errorMessage" style="color: red;"></div>
+</div>
+
+<!-- Randevu Tablosu -->
+<table class="table table-bordered mt-3">
+    <tr>
+        <th>Ad</th>
+        <th>Sorumlu Hoca</th>
+        <th>İstenilen Tarih</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.adı</td>
+            <td>@x.sorumluhoca</td>
+            <td>@x.tarih</td>
+            <td>
+                <!-- Onayla Butonu (Yeşil) -->
+                <button class="btn btn-success onayla" data-id="@x.Id" style="margin-right: 10px;">Onayla</button>
+
+                <!-- Reddet Butonu (Kırmızı) -->
+                <button class="btn btn-danger reddet" data-id="@x.Id">Reddet</button>
+            </td>
+        </tr>
+    }
+</table>
+
+<!-- jQuery ve AJAX İşlemleri -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Onayla Butonunun İşlevi
+        $(".onayla").on("click", function () {
+            var id = $(this).data('id');
+
+            // AJAX isteği ile onay işlemini gerçekleştir
+            $.ajax({
+                url: '/randevu/Onayla', // Controller'daki Onayla metoduna gönderilecek URL
+                type: 'POST',
+                data: { id: id },
+                success: function (response) {
+                    $("#successMessage").text("Randevu onaylandı!");
+                    $("#message").show();
+                    setTimeout(function () {
+                        $("#message").fadeOut();
+                    }, 3000);
+                },
+                error: function () {
+                    $("#errorMessage").text("Bir hata oluştu, lütfen tekrar deneyin.");
+                    $("#message").show();
+                    setTimeout(function () {
+                        $("#message").fadeOut();
+                    }, 3000);
+                }
+            });
+        });
+
+        // Reddet Butonunun İşlevi
+        $(".reddet").on("click", function () {
+            var id = $(this).data('id');
+
+            // AJAX isteği ile reddet işlemini gerçekleştir
+            $.ajax({
+                url: '/randevu/Reddet', // Controller'daki Reddet metoduna gönderilecek URL
+                type: 'POST',
+                data: { id: id },
+                success: function (response) {
+                    $("#errorMessage").text("Randevu reddedildi!");
+                    $("#message").show();
+                    setTimeout(function () {
+                        $("#message").fadeOut();
+                    }, 3000);
+                },
+                error: function () {
+                    $("#errorMessage").text("Bir hata oluştu, lütfen tekrar deneyin.");
+                    $("#message").show();
+                    setTimeout(function () {
+                        $("#message").fadeOut();
+                    }, 3000);
+                }
+            });
+        });
+    });
+</script>

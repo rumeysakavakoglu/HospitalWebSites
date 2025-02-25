@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "Acil Durum";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acil Durum Bildirimi</title>
+    <style>
+        * {
+            margin-top: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Acil Durum Bildirimi Paneli */
+        .emergency-alert {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            z-index: 1000;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+            .emergency-alert .icon {
+                margin: 0 10px;
+                font-size: 28px;
+            }
+
+        /* Sayfa içeriği */
+        .content {
+            padding: 50px;
+            font-size: 18px;
+        }
+
+        /* Form */
+        .form-container {
+            margin-top: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Acil Durum Bildirimi Paneli -->
+    <div class="emergency-alert" id="emergencyAlert">
+        <span class="icon">🚨</span> Acil Durum! Hastane Hizmetleri Durdurulmuştur! <span class="icon">🚨</span>
+    </div>
+
+    <!-- Sayfa İçeriği -->
+    <div class="content">
+        <h1>Acil Durum Ekle</h1>
+
+        <!-- Acil Durum Formu -->
+        <div class="form-container">
+            <div class="form-group">
+                <label for="acilDurum">Acil Durum Mesajı:</label>
+                <textarea id="acilDurum" class="form-control" rows="3" required></textarea>
+            </div>
+            <button class="btn btn-primary" id="acilDurumEkle">Acil Durum Ekle</button>
+        </div>
+    </div>
+
+    <!-- jQuery ve AJAX -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // JavaScript ile blink efekti
+        $(document).ready(function () {
+            function blink() {
+                $("#emergencyAlert").fadeOut(750).fadeIn(750, blink);
+            }
+            blink();
+
+            // Acil Durum Ekle Butonunun İşlevselliği
+            $('#acilDurumEkle').on('click', function () {
+                var acilDurumMesaj = $('#acilDurum').val();
+                if (acilDurumMesaj) {
+                    $.ajax({
+                        url: '/AcilDurum/EkleAcilDurum',
+                        type: 'POST',
+                        data: { mesaj: acilDurumMesaj },
+                        success: function (response) {
+                            alert("Acil durum başarıyla eklendi!");
+                            $('#acilDurum').val('');
+                        },
+                        error: function () {
+                            alert("Bir hata oluştu!");
+                        }
+                    });
+                } else {
+                    alert("Acil durum mesajını girin!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

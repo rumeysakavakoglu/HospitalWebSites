@@ -1,0 +1,289 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>bbbbbbbbbbb</Name>
+    <Description>VeriTabanıDestekliHastaneWebSitesi</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>bbbbbbbbbbb</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="bbbbbbbbbbb.csproj" File="bbbbbbbbbbb.csproj" ReplaceParameters="true">
+      <Folder Name="adminpanelliwebsitesi" TargetFolderName="adminpanelliwebsitesi">
+        <ProjectItem ReplaceParameters="false" TargetFileName="doctor.images.png">doctor.images.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Ekran görüntüsü 2024-12-18 235519.png">vstg0001.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="hasst.png">hasst.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="hastane.image.png">hastane.image.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="hospital-symbol.jpg">hospital-symbol.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="images.jpg">images.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="index.html">index.html</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="indir (1).jpg">indir (1).jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="indir.jpg">indir.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="pngtree-medical-health-logo-png-image_4135893.jpg">pngtree-medical-health-logo-png-image_4135893.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="sss.png">sss.png</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="style.css">style.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="style1.css">style1.css</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="zxs.png">zxs.png</ProjectItem>
+      </Folder>
+      <Folder Name="App_Data" TargetFolderName="App_Data" />
+      <Folder Name="App_Start" TargetFolderName="App_Start">
+        <ProjectItem ReplaceParameters="true" TargetFileName="BundleConfig.cs">BundleConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="FilterConfig.cs">FilterConfig.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="RouteConfig.cs">RouteConfig.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Content" TargetFolderName="Content">
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-grid.css">bootstrap-grid.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-grid.css.map">bootstrap-grid.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-grid.min.css">bootstrap-grid.min.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-grid.min.css.map">bootstrap-grid.min.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-grid.rtl.css">bootstrap-grid.rtl.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-grid.rtl.css.map">bootstrap-grid.rtl.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-grid.rtl.min.css">bootstrap-grid.rtl.min.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-grid.rtl.min.css.map">bootstrap-grid.rtl.min.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-reboot.css">bootstrap-reboot.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-reboot.css.map">bootstrap-reboot.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-reboot.min.css">bootstrap-reboot.min.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-reboot.min.css.map">bootstrap-reboot.min.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-reboot.rtl.css">bootstrap-reboot.rtl.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-reboot.rtl.css.map">bootstrap-reboot.rtl.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-reboot.rtl.min.css">bootstrap-reboot.rtl.min.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-reboot.rtl.min.css.map">bootstrap-reboot.rtl.min.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-utilities.css">bootstrap-utilities.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-utilities.css.map">bootstrap-utilities.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-utilities.min.css">bootstrap-utilities.min.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-utilities.min.css.map">bootstrap-utilities.min.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-utilities.rtl.css">bootstrap-utilities.rtl.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-utilities.rtl.css.map">bootstrap-utilities.rtl.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-utilities.rtl.min.css">bootstrap-utilities.rtl.min.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap-utilities.rtl.min.css.map">bootstrap-utilities.rtl.min.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.css">bootstrap.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.css.map">bootstrap.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.css">bootstrap.min.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.css.map">bootstrap.min.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.rtl.css">bootstrap.rtl.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.rtl.css.map">bootstrap.rtl.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.rtl.min.css">bootstrap.rtl.min.css</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.rtl.min.css.map">bootstrap.rtl.min.css.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Site.css">Site.css</ProjectItem>
+      </Folder>
+      <Folder Name="Controllers" TargetFolderName="Controllers">
+        <ProjectItem ReplaceParameters="true" TargetFileName="acildurum2Controller.cs">acildurum2Controller.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="acildurumController.cs">acildurumController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="anasayfaController.cs">anasayfaController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="asistansController.cs">asistansController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bolmbilgileriController.cs">bolmbilgileriController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="girisController.cs">girisController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="gorevliController.cs">gorevliController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="HomeController.cs">HomeController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="kullaniciAsistanController.cs">kullaniciAsistanController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıBolumbilgileriController.cs">vstg0002.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıHocalarController.cs">vstg0003.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıNobetController.cs">vstg0004.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıRandevuController.cs">vstg0005.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="nobetController.cs">nobetController.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="randevuController.cs">randevuController.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="favicon.ico">favicon.ico</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax">Global.asax</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Global.asax.cs">Global.asax.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="indir (1).jpg">indir (1).jpg</ProjectItem>
+      <Folder Name="Migrations" TargetFolderName="Migrations">
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412141636029_InitialCreate.cs">202412141636029_InitialCreate.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412141636029_InitialCreate.Designer.cs">202412141636029_InitialCreate.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412141636029_InitialCreate.resx">202412141636029_InitialCreate.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412141721334_UntilCreate.cs">202412141721334_UntilCreate.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412141721334_UntilCreate.Designer.cs">202412141721334_UntilCreate.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412141721334_UntilCreate.resx">202412141721334_UntilCreate.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412141756463_UntilCreate1.cs">202412141756463_UntilCreate1.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412141756463_UntilCreate1.Designer.cs">202412141756463_UntilCreate1.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412141756463_UntilCreate1.resx">202412141756463_UntilCreate1.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412181725080_giris.cs">202412181725080_giris.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412181725080_giris.Designer.cs">202412181725080_giris.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412181725080_giris.resx">202412181725080_giris.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412181741369_gorevli.cs">202412181741369_gorevli.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412181741369_gorevli.Designer.cs">202412181741369_gorevli.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412181741369_gorevli.resx">202412181741369_gorevli.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412181800351_gorevli1.cs">202412181800351_gorevli1.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412181800351_gorevli1.Designer.cs">202412181800351_gorevli1.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412181800351_gorevli1.resx">202412181800351_gorevli1.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412182029152_anasatfa.cs">202412182029152_anasatfa.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412182029152_anasatfa.Designer.cs">202412182029152_anasatfa.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412182029152_anasatfa.resx">202412182029152_anasatfa.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412182120449_kullaniciAsistan.cs">202412182120449_kullaniciAsistan.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412182120449_kullaniciAsistan.Designer.cs">202412182120449_kullaniciAsistan.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412182120449_kullaniciAsistan.resx">202412182120449_kullaniciAsistan.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412190914557_silbuton.cs">202412190914557_silbuton.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412190914557_silbuton.Designer.cs">202412190914557_silbuton.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412190914557_silbuton.resx">202412190914557_silbuton.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412190937562_nobet.cs">202412190937562_nobet.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412190937562_nobet.Designer.cs">202412190937562_nobet.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412190937562_nobet.resx">202412190937562_nobet.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412190940503_nmt.cs">202412190940503_nmt.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412190940503_nmt.Designer.cs">202412190940503_nmt.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412190940503_nmt.resx">202412190940503_nmt.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191106545_kullanıcıhocalar.cs">vstg0006.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191106545_kullanıcıhocalar.Designer.cs">vstg0007.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191106545_kullanıcıhocalar.resx">vstg0008.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191155238_ons.cs">202412191155238_ons.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191155238_ons.Designer.cs">202412191155238_ons.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191155238_ons.resx">202412191155238_ons.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191449304_kullanıcıRandevu .cs">vstg0009.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191449304_kullanıcıRandevu .Designer.cs">vstg0010.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191449304_kullanıcıRandevu .resx">vstg0011.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191513506_one.cs">202412191513506_one.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191513506_one.Designer.cs">202412191513506_one.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191513506_one.resx">202412191513506_one.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191639321_gorev.cs">202412191639321_gorev.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191639321_gorev.Designer.cs">202412191639321_gorev.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191639321_gorev.resx">202412191639321_gorev.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191742087_sss.cs">202412191742087_sss.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191742087_sss.Designer.cs">202412191742087_sss.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191742087_sss.resx">202412191742087_sss.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191804541_aaa.cs">202412191804541_aaa.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191804541_aaa.Designer.cs">202412191804541_aaa.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191804541_aaa.resx">202412191804541_aaa.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191828165_aaaa.cs">202412191828165_aaaa.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191828165_aaaa.Designer.cs">202412191828165_aaaa.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191828165_aaaa.resx">202412191828165_aaaa.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191848129_aasss.cs">202412191848129_aasss.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191848129_aasss.Designer.cs">202412191848129_aasss.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191848129_aasss.resx">202412191848129_aasss.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191855594_AddRandevuDurumu.cs">202412191855594_AddRandevuDurumu.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191855594_AddRandevuDurumu.Designer.cs">202412191855594_AddRandevuDurumu.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412191855594_AddRandevuDurumu.resx">202412191855594_AddRandevuDurumu.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412192007545_aödş.cs">vstg0012.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412192007545_aödş.Designer.cs">vstg0013.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202412192007545_aödş.resx">vstg0014.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202501271326288_yeni.cs">202501271326288_yeni.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202501271326288_yeni.Designer.cs">202501271326288_yeni.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202501271326288_yeni.resx">202501271326288_yeni.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202502250944096_giriss.cs">202502250944096_giriss.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202502250944096_giriss.Designer.cs">202502250944096_giriss.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202502250944096_giriss.resx">202502250944096_giriss.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202502251058044_nöbett.cs">vstg0015.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202502251058044_nöbett.Designer.cs">vstg0016.Designer.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="202502251058044_nöbett.resx">vstg0017.resx</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Configuration.cs">Configuration.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Models" TargetFolderName="Models">
+        <ProjectItem ReplaceParameters="true" TargetFileName="acildurum.cs">acildurum.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="acildurum2.cs">acildurum2.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="anasayfa.cs">anasayfa.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="asistan.cs">asistan.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bolmbilgileri.cs">bolmbilgileri.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Context.cs">Context.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="giris.cs">giris.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="gorevli.cs">gorevli.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="kullaniciAsistan.cs">kullaniciAsistan.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıBolumbilgileri.cs">vstg0018.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıHocalar.cs">vstg0019.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıNobet.cs">vstg0020.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıRandevu.cs">vstg0021.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="nobet.cs">nobet.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="randevu.cs">randevu.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="Scripts" TargetFolderName="Scripts">
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.bundle.js">bootstrap.bundle.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.bundle.js.map">bootstrap.bundle.js.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.bundle.min.js">bootstrap.bundle.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.bundle.min.js.map">bootstrap.bundle.min.js.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.esm.js">bootstrap.esm.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.esm.js.map">bootstrap.esm.js.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.esm.min.js">bootstrap.esm.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.esm.min.js.map">bootstrap.esm.min.js.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.js">bootstrap.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.js.map">bootstrap.js.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.js">bootstrap.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="bootstrap.min.js.map">bootstrap.min.js.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.7.0.intellisense.js">jquery-3.7.0.intellisense.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.7.0.js">jquery-3.7.0.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.7.0.min.js">jquery-3.7.0.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.7.0.min.map">jquery-3.7.0.min.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.7.0.slim.js">jquery-3.7.0.slim.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.7.0.slim.min.js">jquery-3.7.0.slim.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery-3.7.0.slim.min.map">jquery-3.7.0.slim.min.map</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.validate-vsdoc.js">jquery.validate-vsdoc.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.validate.js">jquery.validate.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.validate.min.js">jquery.validate.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.validate.unobtrusive.js">jquery.validate.unobtrusive.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="jquery.validate.unobtrusive.min.js">jquery.validate.unobtrusive.min.js</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="modernizr-2.8.3.js">modernizr-2.8.3.js</ProjectItem>
+      </Folder>
+      <Folder Name="Views" TargetFolderName="Views">
+        <ProjectItem ReplaceParameters="true" TargetFileName="_ViewStart.cshtml">_ViewStart.cshtml</ProjectItem>
+        <Folder Name="acildurum" TargetFolderName="acildurum">
+          <ProjectItem ReplaceParameters="true" TargetFileName="acildurum.cshtml">acildurum.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="acildurum2" TargetFolderName="acildurum2">
+          <ProjectItem ReplaceParameters="true" TargetFileName="acildurum2.cshtml">acildurum2.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="anasayfa" TargetFolderName="anasayfa">
+          <ProjectItem ReplaceParameters="true" TargetFileName="anasayfa.cshtml">anasayfa.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="asistans" TargetFolderName="asistans">
+          <ProjectItem ReplaceParameters="true" TargetFileName="asistan.cshtml">asistan.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="bolmbilgileri" TargetFolderName="bolmbilgileri">
+          <ProjectItem ReplaceParameters="true" TargetFileName="bolmbilgileri.cshtml">bolmbilgileri.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Guncelle.cshtml">Guncelle.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="giris" TargetFolderName="giris">
+          <ProjectItem ReplaceParameters="true" TargetFileName="giris.cshtml">giris.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="gorevli" TargetFolderName="gorevli">
+          <ProjectItem ReplaceParameters="true" TargetFileName="gorevli.cshtml">gorevli.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Home" TargetFolderName="Home">
+          <ProjectItem ReplaceParameters="true" TargetFileName="About.cshtml">About.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Contact.cshtml">Contact.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Index.cshtml">Index.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="kullaniciAsistan" TargetFolderName="kullaniciAsistan">
+          <ProjectItem ReplaceParameters="true" TargetFileName="kullaniciAsistan.cshtml">kullaniciAsistan.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="vstg0022" TargetFolderName="kullanıcıBolumbilgileri">
+          <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıBolumbilgileri.cshtml">vstg0024.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="vstg0025" TargetFolderName="kullanıcıHocalar">
+          <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıHocalar.cshtml">vstg0027.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="vstg0028" TargetFolderName="kullanıcıNobet">
+          <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıNobet.cshtml">vstg0030.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="vstg0031" TargetFolderName="kullanıcıRandevu">
+          <ProjectItem ReplaceParameters="true" TargetFileName="kullanıcıRandevu.cshtml">vstg0033.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="nobet" TargetFolderName="nobet">
+          <ProjectItem ReplaceParameters="true" TargetFileName="nobet.cshtml">nobet.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="randevu" TargetFolderName="randevu">
+          <ProjectItem ReplaceParameters="true" TargetFileName="randevu.cshtml">randevu.cshtml</ProjectItem>
+        </Folder>
+        <Folder Name="Shared" TargetFolderName="Shared">
+          <ProjectItem ReplaceParameters="true" TargetFileName="_AcildurumListesi.cshtml">_AcildurumListesi.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_AsistanListesi.cshtml">_AsistanListesi.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_GuncellenenListesi.cshtml">_GuncellenenListesi.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_HocaListesi.cshtml">_HocaListesi.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_Layout.cshtml">_Layout.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="_NobetListesi.cshtml">_NobetListesi.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="admin_layout.cshtml">admin_layout.cshtml</ProjectItem>
+          <ProjectItem ReplaceParameters="true" TargetFileName="Error.cshtml">Error.cshtml</ProjectItem>
+        </Folder>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.config">Web.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Debug.config">Web.Debug.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Web.Release.config">Web.Release.config</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

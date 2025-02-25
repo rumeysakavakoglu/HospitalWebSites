@@ -1,0 +1,29 @@
+﻿@model $safeprojectname$.Models.bolmbilgileri
+
+@{
+    ViewBag.Title = "Bölüm Güncelle";
+    Layout = "~/Views/Shared/admin_layout.cshtml";
+}
+
+<h2>Bölüm Güncelle</h2>
+
+<form action="@Url.Action("Guncelle", "bolmbilgileri")" method="post">
+    <input type="hidden" name="id" value="@Model.id" />
+
+    <div class="form-group">
+        <label for="ad">Poliklinik Adı:</label>
+        <input type="text" class="form-control" id="ad" name="ad" value="@Model.ad" required />
+    </div>
+
+    <div class="form-group">
+        <label for="yataksayısı">Yatak Sayısı:</label>
+        <input type="number" class="form-control" id="yataksayısı" name="yataksayısı" value="@Model.yataksayısı" required />
+    </div>
+
+    <div class="form-group">
+        <label for="Ayaktahastagiris">Ayakta Hasta Giriş Kapasitesi:</label>
+        <input type="number" class="form-control" id="Ayaktahastagiris" name="Ayaktahastagiris" value="@Model.Ayaktahastagiris" required />
+    </div>
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
